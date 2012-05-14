@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  reader_id: 1
+  magazine_id: 1
+  last_renewal_on: 2012-03-27 22:40:08
+  length_in_issues: 1
+
+two:
+  reader_id: 1
+  magazine_id: 1
+  last_renewal_on: 2012-03-27 22:40:08
+  length_in_issues: 1

@@ -1,0 +1,10 @@
+<p>
+	!New form
+	<%= form_for @contact do|f| %>
+		<%= f.label :name%>
+		<%= f.text_field :name%>
+		<%= f.label :phone%>
+		<%= f.text_field :phone%>
+		<%= submit_tag "Submit"%>
+	<% end %>
+</p>	

@@ -1,0 +1,4 @@
+<% unless @comments.empty? %>
+$('#comments').append("<%= escape_javascript(raw render(@comments))%>");
+<% end %>
+

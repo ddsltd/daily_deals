@@ -1,0 +1,21 @@
+This is show page!
+<table>
+	<tr>
+		<th>
+			name
+		</th>
+		<th>
+			email
+		</th>
+	</tr>		
+<% for user in @users %>
+<tr>
+	<td>	
+		<%= user.name %>
+	</td>
+	<td>
+		<%= user.email %>
+	</td>		
+</tr>	
+<%end%>
+</table>

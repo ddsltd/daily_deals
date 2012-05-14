@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  cust_name: MyString
+  deal_id: MyString
+  desc: MyText
+  voucher_no: MyString
+  purchased_on: 2012-03-04 10:28:34
+  valid_until: 2012-03-04 10:28:34
+
+two:
+  cust_name: MyString
+  deal_id: MyString
+  desc: MyText
+  voucher_no: MyString
+  purchased_on: 2012-03-04 10:28:34
+  valid_until: 2012-03-04 10:28:34

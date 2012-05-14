@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  comment_desc: MyString
+  deals_id: MyString
+
+two:
+  comment_desc: MyString
+  deals_id: MyString

@@ -1,0 +1,50 @@
+<h1>
+	Nearby deals
+</h1>
+
+<% for deal in @deals %>
+<ul>
+	<li>
+		<span>
+		 <%= link_to  image_tag("http://a4.ak.lscdn.net/imgs/9fd65c2c-9924-4cc3-87a7-157fe7e636a0/85_q60_.jpg", :alt => "Deal" ,:size => "5*8") , deal_path(deal) , :id=>"deal_link"  %>
+		</span>
+		<h3>
+			<%= link_to deal.name , deal_path(deal)%>
+		</h3>	
+		<p>
+			<%=  link_to deals_size(deal.desc) , deal_path(deal) , :id => "deals_desc"%>
+		</p>	
+		<sup class="dollar_sign" id="sup_dollar">$</sup>
+		<%= link_to deal.cost , deal_path(deal), :id => "cost_id" %>
+		<%= button_to "view"   , deal_path(deal) ,:method => "get" ,:id => "button_view" %>
+		<div id="deal" data-id="<%= deal.id   %>"/>
+	
+	</li>
+	</p>		
+</ul>  
+<div id="comments">
+	<%= render deal.comments %>
+</div>
+<% end %>
+
+<script>	
+$("#deal_link").hover(
+  function () {
+    	$("#deals_desc").hide();
+		$("#button_view").hide();
+		$("#cost_id").hide();
+		$("#sup_dollar").hide();
+  }
+);
+
+$(function(){
+	setTimeout(updateComments,1000);
+});
+
+function updateComments(){
+	var deal_id = $("#deal").attr("data-id");
+    var after = $(".comment:last-child").attr("data-time");
+	$.getScript("/comments.js?deal_id=" + deal_id +"&after=" + after)
+	setTimeout(updateComments,1000);
+}
+</script>

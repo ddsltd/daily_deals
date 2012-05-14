@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DailyDeals</title>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+<div id='sidebar'>
+	Things that go in the sidebar!
+	<% if content_for?(:recent)%>
+	<p class='recent'>
+		<%= yield :recent %>
+	</p>
+	<% end %>
+</div>
+</body>
+</html>

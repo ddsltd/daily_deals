@@ -1,0 +1,9 @@
+<% link_text = params[:admin] ? "Admins" : "all" %>
+
+<% href = params[:admin] ? 
+              writers_path : writers_path(:admin => true) %>
+
+	
+$("#toggle").html("Showing <%= link_text %> (toggle)");
+$("#toggle").attr("href", "<%= href %>");
+$("#writer").html('<%= escape_javascript(render @writers) %>');

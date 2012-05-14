@@ -1,0 +1,12 @@
+<h1>Listing writers</h1>
+
+<table>
+<%= link_to "Showing all (toggle)" , writers_path(:admin =>true) ,:remote=> true, :id=>'toggle'  %>	
+<ul id='writer'>
+	<%= render @writers%>	
+</ul>
+
+</table>
+<br />
+
+<%= link_to 'New Writer', new_writer_path %>

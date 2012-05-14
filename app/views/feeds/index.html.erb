@@ -1,0 +1,10 @@
+<% content_for :recent do%>
+<h1>Recent Recipes</h1>
+<ul>
+	<% @recent_recipes.each do
+		|recipe| %>
+			<li><%= link_to recipe.title %>			
+		</li>	
+	<% end %>
+</ul>		
+<% end %>
